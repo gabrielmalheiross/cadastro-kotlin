@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activity.CadastroActivity">
+
+    <TextView
+        android:id="@+id/cadastroHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:text="Cadastre-se"
+        android:textColor="@color/orange"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/nomeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Nome"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:layout_below="@id/cadastroHeading"
+        android:background="@drawable/orange_border"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Email"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:layout_below="@id/nomeEditText"
+        android:background="@drawable/orange_border"
+        android:layout_marginTop="16dp"
+        android:maxLines="1"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveButton"
+        style="@android:style/Widget.Button"
+        android:layout_margin="32dp"
+        android:background="@drawable/orange_button_bg"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"/>
+
+
+</RelativeLayout>

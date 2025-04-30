@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Notes SQLite"
+rootProject.name = "Cadastro Kotlin"
 include(":app")
  

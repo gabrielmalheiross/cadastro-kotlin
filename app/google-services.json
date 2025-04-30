@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "522218313422",
+    "project_id": "projeto-faculdade-8441c",
+    "storage_bucket": "projeto-faculdade-8441c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522218313422:android:45868ffd9cd2c9813f229f",
+        "android_client_info": {
+          "package_name": "com.example.cadastrokotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9DMzLHsCgZzloWuETgj-t80N7EY7kJvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

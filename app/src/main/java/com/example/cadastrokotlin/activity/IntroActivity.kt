@@ -1,14 +1,10 @@
-package com.example.notessqlite.activity
+package com.example.cadastrokotlin.activity
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.notessqlite.MainActivity
-import com.example.notessqlite.R
-import com.example.notessqlite.databinding.ActivityIntroBinding
+import com.example.cadastrokotlin.MainActivity
+import com.example.cadastrokotlin.databinding.ActivityIntroBinding
 
 class IntroActivity : AppCompatActivity() {
     private lateinit var binding:ActivityIntroBinding
@@ -18,7 +14,11 @@ class IntroActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.startBtn.setOnClickListener {
-            startActivity(Intent(this@IntroActivity, MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        binding.btnCadastre.setOnClickListener{
+            startActivity(Intent(this, CadastroActivity::class.java))
         }
     }
 }

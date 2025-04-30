@@ -1,4 +1,4 @@
-package com.example.notessqlite
+package com.example.cadastrokotlin
 
 import org.junit.Test
 

@@ -50,6 +50,33 @@
                 android:layout_height="wrap_content"
                 android:text="Clique aqui"
                 android:textSize="18sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/meuTextView"
+                    android:layout_width="195dp"
+                    android:layout_height="wrap_content"
+                    android:text="Não possui uma conta?"
+                    android:textSize="18sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCadastre"
+                    style="@android:style/Widget.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/orange"
+                    android:padding="0dp"
+                    android:textSize="18sp"
+                    android:text="Cadastre-se" />
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

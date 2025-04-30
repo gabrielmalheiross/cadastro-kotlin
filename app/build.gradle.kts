@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.notessqlite"
+    namespace = "com.example.cadastrokotlin"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.notessqlite"
+        applicationId = "com.example.cadastrokotlin"
         minSdk = 28
         targetSdk = 35
         versionCode = 1
