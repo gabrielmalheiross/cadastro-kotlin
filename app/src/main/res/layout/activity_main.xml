@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/botaoVoltar"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignTop="@id/cadastroHeading"
         android:layout_alignParentStart="true"
         android:contentDescription="@string/intro_text"
@@ -20,13 +20,16 @@
     <TextView
         android:id="@+id/cadastroHeading"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
-        android:text="Cadastre-se"
+        android:maxLines="1"
+        android:text="@string/cadastro_heading_text"
+        android:inputType="text"
+        android:autofillHints="name"
         android:textColor="@color/orange"
-        android:textSize="24sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/labelNome"
@@ -34,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_below="@id/cadastroHeading"
-        android:text="Nome:"
+        android:text="@string/text_nome"
         android:textSize="18sp" />
     <EditText
         android:id="@+id/nomeEditText"
@@ -42,8 +45,9 @@
         android:layout_height="60dp"
         android:padding="12dp"
         android:textSize="20sp"
-        android:hint="@string/hint_nome"
+        android:hint="@string/hint_text"
         android:layout_below="@id/labelNome"
+        android:inputType="text"
         android:maxLines="1"/>
 
     <TextView
@@ -52,16 +56,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_below="@id/nomeEditText"
-        android:hint="@string/hint_email"
-        android:text="Email:"
+        android:hint="@string/hint_text"
+        android:text="@string/text_email"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
+        android:autofillHints="emailAddress"
         android:layout_height="60dp"
         android:layout_below="@id/labelEmail"
-        android:hint="@string/hint_email"
+        android:hint="@string/hint_text"
         android:maxLines="1"
         android:padding="12dp"
         android:textSize="20sp" />
@@ -75,33 +80,20 @@
         android:text="Sexo:"
         android:textSize="18sp" />
 
-    <RadioGroup
-        android:id="@+id/radioSexo"
+    <Spinner
+        android:id="@+id/spinnerSexo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/labelSexo"
-        android:orientation="horizontal">
-        <RadioButton android:id="@+id/radio_masculino"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Masculino"/>
-        <RadioButton android:id="@+id/radio_feminino"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Feminino"/>
-        <RadioButton android:id="@+id/radio_outro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Outro"/>
-    </RadioGroup>
+        android:padding="10dp" />
 
     <TextView
         android:id="@+id/labelEscolaridade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_below="@id/radioSexo"
-        android:text="Escolaridade:"
+        android:layout_below="@id/spinnerSexo"
+        android:text="@string/label_text_escolaridade"
         android:textSize="18sp" />
 
     <Spinner
@@ -114,7 +106,9 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveButton"
         style="@android:style/Widget.Button"
-        android:layout_margin="32dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
         android:background="@drawable/orange_button_bg"
         android:textColor="@color/white"
         android:layout_width="match_parent"

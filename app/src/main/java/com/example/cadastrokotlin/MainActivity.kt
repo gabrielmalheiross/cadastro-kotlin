@@ -31,11 +31,17 @@ class MainActivity : AppCompatActivity() {
 
         val nome = findViewById<EditText>(R.id.nomeEditText)
         val email = findViewById<EditText>(R.id.emailEditText)
-        val sexo = findViewById<RadioGroup>(R.id.radioSexo)
+        val spinnerSexo = findViewById<Spinner>(R.id.spinnerSexo)
         val spinnerEscolaridade = findViewById<Spinner>(R.id.spinnerEscolaridade)
         val btnCadastrar = findViewById<Button>(R.id.saveButton)
 
         val escolaridades = resources.getStringArray(R.array.Escolaridades)
+        val sexos = resources.getStringArray(R.array.Sexos)
+
+        if (spinnerSexo != null) {
+            val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, sexos)
+            spinnerSexo.adapter = adapter
+        }
 
         if (spinnerEscolaridade != null) {
             val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, escolaridades)
@@ -48,12 +54,10 @@ class MainActivity : AppCompatActivity() {
             val postEmail = email.text.toString()
 
 
-            if (postNome.isBlank() || postEmail.isBlank() || !isRadioGroupFilled(sexo)) {
+            if (postNome.isBlank() || postEmail.isBlank()) {
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
             } else {
-                val sexoIdSelecionado = sexo.checkedRadioButtonId
-                val postSexo = findViewById<RadioButton>(sexoIdSelecionado).id
-
+                val postSexo = spinnerSexo.selectedItem.toString()
                 val postEscolaridade = spinnerEscolaridade.selectedItem.toString()
 
                 val cliente = Cliente(0, postNome, postEmail, postSexo, postEscolaridade)
@@ -65,7 +69,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun isRadioGroupFilled(radioGroup: RadioGroup): Boolean {
-        return radioGroup.checkedRadioButtonId != -1
-    }
 }

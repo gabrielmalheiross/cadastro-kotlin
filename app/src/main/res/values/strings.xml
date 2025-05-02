@@ -3,8 +3,23 @@
     <string name="intro_title">Cadastro de clientes</string>
     <string name="intro_text">Faça seu cadastro!</string>
     <string name="intro_signin">Não possui uma conta? </string>
-    <string name="hint_email">Digite aqui</string>
-    <string name="hint_nome">Digite aqui</string>
+    <string name="text_email">Email:</string>
+    <string name="hint_text">Digite aqui</string>
+    <string name="text_nome">Nome:</string>
+    <string name="label_text_escolaridade">Escolaridade:</string>
+    <string name="cadastro_heading_text">Cadastre-se</string>
+
+    <string name="radio_feminino">Feminino</string>
+    <string name="radio_masculino">Masculino</string>
+    <string name="radio_nao_binario">Não Binário</string>
+    <string name="radio_nao_informar">Prefiro não informar</string>
+
+    <string-array name="Sexos">
+        <item>Feminino</item>
+        <item>Masculino</item>
+        <item>Não Binário</item>
+        <item>Prefiro não informar</item>
+    </string-array>
 
     <string-array name="Escolaridades">
         <item>Ensino Fundamental</item>
