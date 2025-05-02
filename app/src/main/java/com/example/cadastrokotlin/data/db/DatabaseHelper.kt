@@ -14,10 +14,16 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val COLUMN_ID = "id"
         private const val COLUMN_NOME = "nome"
         private const val COLUMN_EMAIL = "email"
+        private const val COLUMN_GENERO = "genero_id"
+        private const val COLUMN_ESCOLARIDADE = "escolaridade"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val createTableQuery = "CREATE TABLE TABLE_NAME ($COLUMN_ID INTEGER PRIMARY KEY, $COLUMN_NOME TEXT, $COLUMN_EMAIL TEXT)"
+        val createTableQuery = "CREATE TABLE $TABLE_NAME ($COLUMN_ID INTEGER PRIMARY KEY, " +
+                " $COLUMN_NOME TEXT, " +
+                " $COLUMN_EMAIL TEXT, " +
+                " $COLUMN_GENERO INTEGER, " +
+                " $COLUMN_ESCOLARIDADE TEXT) "
         db?.execSQL(createTableQuery)
     }
 
@@ -32,6 +38,8 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         val values = ContentValues().apply {
             put(COLUMN_NOME, cliente.nome)
             put(COLUMN_EMAIL, cliente.email)
+            put(COLUMN_GENERO, cliente.genero_id)
+            put(COLUMN_ESCOLARIDADE, cliente.escolaridade)
         }
         db.insert(TABLE_NAME, null, values)
         db.close()

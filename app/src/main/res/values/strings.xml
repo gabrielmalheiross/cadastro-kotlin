@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">Cadastro</string>
-    <string name="intro_title">Cadastro de funcionários</string>
+    <string name="intro_title">Cadastro de clientes</string>
     <string name="intro_text">Faça seu cadastro!</string>
     <string name="intro_signin">Não possui uma conta? </string>
+    <string name="hint_email">Digite aqui</string>
+    <string name="hint_nome">Digite aqui</string>
+
+    <string-array name="Escolaridades">
+        <item>Ensino Fundamental</item>
+        <item>Ensino Médio</item>
+        <item>Ensino Superior</item>
+        <item>Outra</item>
+    </string-array>
 </resources>

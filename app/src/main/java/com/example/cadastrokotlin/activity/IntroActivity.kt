@@ -16,9 +16,5 @@ class IntroActivity : AppCompatActivity() {
         binding.startBtn.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
-
-        binding.btnCadastre.setOnClickListener{
-            startActivity(Intent(this, CadastroActivity::class.java))
-        }
     }
 }
